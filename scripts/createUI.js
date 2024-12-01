@@ -15,10 +15,10 @@ export default class CreateUI {
     updateUI() {
         this.game.screen.get("ui").clear();
 
-        this.game.screen.get("ui").drawRectRound(this.posLeftY - 30, 10, 50, 35, 15, "rgb(128, 141, 104)");
-        this.game.screen.get("ui").print(this.posLeftY - 10, 35, this.game.player1.score, "gold");
+        this.game.screen.get("ui").drawRectRound(this.posLeftY - 30, 10, 50, 35, 15, "rgb(192, 224, 169)");
+        this.game.screen.get("ui").print(this.posLeftY - 10, 35, this.game.player1.score, "rgb(213, 119, 190)");
         
-        this.game.screen.get("ui").drawRectRound(this.posRightY - 30, 10, 50, 35, 15, "rgb(128, 141, 104)");
-        this.game.screen.get("ui").print(this.posRightY - 10, 35, this.game.player2.score, "gold");
+        this.game.screen.get("ui").drawRectRound(this.posRightY - 30, 10, 50, 35, 15, "rgb(192, 224, 169)");
+        this.game.screen.get("ui").print(this.posRightY - 10, 35, this.game.player2.score, "rgb(119, 190, 213)");
     }
 }
