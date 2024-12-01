@@ -10,7 +10,7 @@ export default class Player extends Body {
     }
 
     draw() {
-        this.game.screen.get("gamelayer").drawRect(this.x, this.y, this.width, this.height, this.color);
+        this.game.screen.get("gamelayer").drawField(this.x, this.y, this.width, this.height, this.color);
     }
 
     scoreInc() {

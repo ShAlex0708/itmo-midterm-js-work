@@ -35,8 +35,9 @@ class Game {
 
     init() {
         this.screen.get("background").fill("rgb(218, 245, 210)");
-        this.screen.get("background").drawRect((this.screen.get("background").element.width / 2) - 3, 0, 4, this.screen.get("background").element.height, "rgb(243, 249, 227)");
+        this.screen.get("background").drawField((this.screen.get("background").element.width / 2) - 3, 0, 4, this.screen.get("background").element.height, "rgb(243, 249, 227)");
         this.screen.get("background").drawCircle((this.screen.get("background").element.width / 2), (this.screen.get("background").element.height / 2), 100, 4, "rgb(243, 249, 227)", false);
+        
 
         requestAnimationFrame(time => this.loop(time));
 

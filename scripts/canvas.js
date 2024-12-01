@@ -18,7 +18,7 @@ export default class Canvas {
         this.cx.fillRect(0, 0, this.element.width, this.element.height);
     }
 
-    drawRect(x, y, width, height, color) {
+    drawField(x, y, width, height, color) {
         // создвём метод два, принимаем координаты, высоту, ширину и цвет, рисуем прямоугольник
         this.cx.fillStyle = color;
         this.cx.fillRect(x, y, width, height);
