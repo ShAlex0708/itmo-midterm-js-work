@@ -1,4 +1,4 @@
-import Vector from "./vector";
+import Vector from "./vector.js";
 
 export default class Body {
     constructor(x, y, speed = 5000, width = 14, height = 80) {

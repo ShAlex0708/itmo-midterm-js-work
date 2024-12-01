@@ -2,6 +2,7 @@ import Canvas from "./canvas.js";
 import Control from "./control.js";
 import CreateUI from "./createUI.js";
 import Player from "./player.js";
+
 // создаём экземпляры слоёв
 class Game {
     constructor() {
@@ -11,13 +12,13 @@ class Game {
             ["ui", new Canvas()]
         ]);
         // создаём коллекцию слоёв, которые будут храниться в screen
-
-        this.control1 = new Control([[38, "up"], [40, "down"]]);
-        this.control2 = new Control([[87, "up"], [83, "down"]]);
+        [38, "up"], [40, "down"]
+        this.control1 = new Control([[87, "up"], [83, "down"]]);
+        this.control2 = new Control([[38, "up"], [40, "down"]]);
         // создаём экземпляры контролла игроков, передаём ключи управления
 
-        this.player1 = new Player(this, 10, 200, this.control1, "rgb(221, 141, 200)");
-        this.player2 = new Player(this, this.screen.get("gamelayer").element.width - 20, 200, this.control2, "rgb(141, 205, 221)");
+        this.player1 = new Player(this, 10, 200, this.control1, "rgb(211, 60, 191)");
+        this.player2 = new Player(this, this.screen.get("gamelayer").element.width - 20, 200, this.control2, "rgb(48, 109, 156)");
         this.UI = new CreateUI(this);
         // создаём экземпляр ЮИ
 
