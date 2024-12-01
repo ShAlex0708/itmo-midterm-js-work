@@ -9,7 +9,7 @@ export default class Ball extends Body {
         this.width = this.radius;
         this.height = this.radius;
         this.color = color;
-        this.speed = 4000;
+        this.speed = 1000;
         this.dx = this.speed;
         this.dy = this.speed;
         this.collisionShape = {
@@ -21,25 +21,25 @@ export default class Ball extends Body {
     }
 
     draw() {
-        this.game.get("gamelayer").drawCircle(this.x, this.y, this.radius, 0, this.color);
+        this.game.screen.get("gamelayer").drawCircle(this.x, this.y, this.radius, 0, this.color);
     }
 
     spawn(time) {
         this.x = this.game.screen.get("gamelayer").element.width / 2;
         this.x = this.game.screen.get("gamelayer").element.height / 2;
 
-        this.dx += -1;
-        this.dy += time % 2 ? 1 : -1;
+        this.dx *= -1;
+        this.dy *= time % 2 ? 1 : -1;
     }
 
     update(time) {
 
         if (this.y <= 0) {
-            this.dy += -1;
+            this.dy *= -1;
         }
 
         if (this.y + this.radius >= this.game.screen.get("gamelayer").element.height) {
-            this.dy += -1;
+            this.dy *= -1;
         }
 
         if (this.x + this.radius >= this.game.screen.get("gamelayer").element.width) {
@@ -55,11 +55,11 @@ export default class Ball extends Body {
         }
 
         if (this.game.collider.collides(this, this.game.player1)) {
-            this.dx += -1;
+            this.dx *= -1;
         }
 
         if (this.game.collider.collides(this, this.game.player2)) {
-            this.dx += -1;
+            this.dx *= -1;
         }
 
         this.bodyMove();

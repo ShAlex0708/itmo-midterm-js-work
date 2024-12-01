@@ -19,12 +19,12 @@ class Game {
         this.control2 = new Control([[38, "up"], [40, "down"]]);
         // создаём экземпляры контролла игроков, передаём ключи управления
 
-        this.player1 = new Player(this, 10, 200, this.control1, "rgb(222, 110, 194)");
+        this.player1 = new Player(this, 6, 200, this.control1, "rgb(222, 110, 194)");
         this.player2 = new Player(this, this.screen.get("gamelayer").element.width - 20, 200, this.control2, "rgb(110, 194, 222)");
         
 
-        this.ball = new Ball(this, (this.screen.get("gamelayer").element.width / 2), 100, 10, "rgb(227, 249, 244)")
-        
+        this.ball = new Ball(this, (this.screen.get("gamelayer").element.width / 2), 100, 10, "rgb(222, 222, 110)")
+
         this.collider = new Collider();
 
         this.UI = new CreateUI(this);
